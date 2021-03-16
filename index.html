@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>온실가스 배출 비용, 얼마나 비싸게요?</title>
+</head>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@200;300;400;500;600;700&display=swap');
+  </style>
+<!-- <link rel="stylesheet" href="https://d25myo8jkbyg7u.cloudfront.net/common/tanso/style.css"> -->
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://d25myo8jkbyg7u.cloudfront.net/common/tanso/dragula.css">
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js"></script>
+  <script src="https://d25myo8jkbyg7u.cloudfront.net/common/tanso/countUp.min.js"> </script>
+  
+  <header class="header">
+    <a href="https://newstapa.org/"><h1 class="logo-nstp">뉴스타파 홈페이지 바로가기</h1></a>    
+  </header>
+
+  <!-- 인트로 -->
+  <div class="area-intro">
+    <div class="intro-bg">
+      <div class="sticker posco">
+        <img src="https://d25myo8jkbyg7u.cloudfront.net/common/tanso/assets/sticker-posco.png" alt="">
+      </div>
+      <div class="sticker samsung">
+        <img src="https://d25myo8jkbyg7u.cloudfront.net/common/tanso/assets/sticker-samsung.png" alt="">
+      </div>
+    </div>
+    <p class="intro-text">우리나라 주요 기업들의 연간 <u>온실가스🏭 배출량</u><br> <span class="spec">80,597,292</span>톤</p>
+    <p class="intro-text">온실가스 배출권 가격으로 환산하면<br> <span class="spec">170,764,602,086</span>원</p>
+    <p class="intro-text">그런데 기업이 부담하는 건… <span class="spec">0원</span>??! 😱</p>
+    <h1 class="intro-title">온실가스 배출 비용,<br>얼마나 퍼줬게요?🤔</h1>
+    <!-- <p class="scroll-indicator">👇아래로 스크롤👇</p> -->
+  </div>
+
+  <!-- 설명 -->
+  <div class="area-description">
+    <h2 class="description-title">온실가스 배출권 거래제란?</h2>
+    <p class="description-text">기업이 온실가스를 내뿜는 만큼 돈💰을 내게 해서, 온실가스 배출량을 줄이도록 하는 제도입니다. <br>(좀 더 자세하게 알고 싶다면? 👉<a href="https://youtu.be/rmPfaPhz63g" target="_blank">클릭</a>)</p>
+    <p class="description-text">그런데 배출권 거래제는 사실상 '있으나 마나' 한 제도라는 지적이 많아요.🤔 원래 기업이 부담해야 할 온실가스 배출 비용을 정부가 부담해주고 있기 때문인데요.</p>
+    <p class="description-text">정부가 대신 내고 있는 배출권 비용, 자그만치 1년에 <span class="spec">17,076,462,086원</span>원에 달한다고 해요.😲<br>엄청난 규모죠? 저는 사실 숫자가 너무 커서 얼마나 비싼지도 잘 모르겠네요...😅</p>
+    <p class="description-text">저같이 헷갈리는 분들을 위해, 얼마나 비싼지 비교해보는 게임을 만들었어요. 저울에 각 항목을 드래그해서 올리면 금액만큼 저울이 기울어집니다.</p>
+  </div>
+
+  <!-- 저울 인터랙티브 -->
+  <div class="area-scale">
+    <div class="values-container">
+      <h3 class="values-title">온실가스 배출비용</h3>
+      <div class="scale-values left"></div>
+    </div>
+
+    <div>
+      <div class="scale-container">
+        <div class="pillar"></div>
+        <div class="board">
+          <div class="dish left"></div>
+          <div class="dish right"></div>
+        </div>
+      </div>
+      <div class="area-data-description">
+        
+      </div>
+    </div>
+
+
+    <div class="values-container">
+      <h3 class="values-title">정부 예산안</h3>
+      <div class="scale-values right"></div>
+    </div>
+
+  </div>
+
+
+  <!-- 아웃트로 -->
+  <div class="area-outro">
+
+    <h2 class="description-title">배출권 거래제 이대로 괜찮을까?</h2>
+    <p class="description-text">한국 정부는 작년 10월, '2050 탄소중립'을 선언했어요. 기후위기를 막기 위해 2050년까지 온실가스 배출량을 0으로 만들겠다는 뜻인데요.</p>
+    <p class="description-text">기업에게 더 부담을 줘서 온실가스를 줄이도록 해도 모자른데, 오히려 기업에게 돈을 주고 있는 상황. '2050 탄소중립', 정말 달성할 의지가 있긴 있는걸까요?</p>
+    <p class="description-text">재미있게 보셨다면 아래👇👇 sns 공유 버튼도 꾹 눌러주세요😎</p>
+    <div class="share-sns-container">
+      <button class="share-sns-button">카카오톡 공유하기</button>
+      <button class="share-sns-button">페이스북 공유하기</button>
+      <button class="share-sns-button" onclick="copyUrlToClipboard()">주소 복사하기</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="credit"></div>
+    <div class="donate">
+      <a href="https://newstapa.org/donate_info" target="_blank">뉴스타파 후원하기</a>
+    </div>
+  </footer>
+
+  <script src="./js/animation.js"></script>
+
+</body>
+
+<script>
+// 엘리먼트 등록
+const leftValuesEl = document.querySelectorAll('.scale-values.left')[0]
+const rightValuesEl = document.querySelectorAll('.scale-values.right')[0]
+
+// 배출권 금액 데이터
+let dataSet = [
+  {
+    name: 'posco',
+    caption: '포스코',
+    description: "2021년 예산안에는 전년도 예산 150억원 대비 150억원 (100.0%) 증액된 300억원이 편성되었다.",
+    cost: 5200,
+    direction: false,
+  },
+  {
+    name: 'samsung',
+    caption: '삼성전자',
+    description: "2021년 예산안에는 전년도 예산 150억원 대비 150억원 (100.0%) 증액된 300억원이 편성되었다.",
+    cost: 1700,
+    direction: false,
+  },
+  {
+    name: 'schoolbus',
+    caption: '어린이 통학차량 LPG차 전환지원',
+    description: "2021년 예산안에는 전년도 예산 150억원 대비 150억원 (100.0%) 증액된 300억원이 편성되었다.",
+    cost: 300,
+    direction: true,
+  },
+  {
+    name: 'hydrostation',
+    caption: '수소충전소 설치',
+    description: "2021년 예산안에는 전년도 예산 150억원 대비 150억원 (100.0%) 증액된 300억원이 편성되었다.",
+    cost: 720,
+    direction: true,
+  },
+  {
+    name: 'youthjob',
+    caption: '청년구직활동 지원금',
+    description: "국민취업지원제도 사업은 「구직자 취업촉진 및 생활안정지원에 관한 법률」(이 하 “「구직자취업촉진법」”)에 따라 도입된 ‘한국형 실업부조’로서 저소득 구직자, 청년 신규실업자, 경력단절여성 등 취업취약계층을 대상으로 생계지원과 취업지원서비스를 제공하는 단위사업이다",
+    cost: 260,
+    direction: true,
+  }
+]
+
+// 선택지 렌더링
+dataSet.map(function(e, i){
+  let elem = `<div class="scale-value" style="color: ${e.direction?'blue':'red'}" data-index="${i}"><img src="https://d25myo8jkbyg7u.cloudfront.net/common/tanso/assets/value-${e.name}.png"><p class="scale-value-caption">${e.caption}</p></div>`;
+  e.direction?rightValuesEl.innerHTML+=elem:leftValuesEl.innerHTML+=elem;
+})
+
+// 현재 각도
+let boardDegree = 0;
+
+// 각도 최대값
+const maxDegree = 35
+
+// 금액에 따른 각도 구하기
+function getDegree(value, direction){
+  let sum = dataSet.reduce((acc, cur, i) => {
+    return acc + cur.cost;
+  }, 0)
+  let degree = (value/sum)*maxDegree;
+  return direction ? degree : degree*(-1)
+}
+
+// 보드 움직이기
+function rotateBoard(degree = boardDegree){
+  anime({
+    targets: '.board',
+    rotate: degree,
+    duration: 2000,
+  })
+  anime({
+    targets: '.dish',
+    rotate: degree*(-1),
+    duration: 3000,
+  })
+}
+
+// 설명
+const dataDescriptionEl = document.querySelectorAll('.area-data-description')[0];
+let dataDescription = [];
+
+function rederDataDescription(){
+  dataDescription.map(function(e, i){
+    dataDescriptionEl.innerHTML += e.description
+    
+  })
+}
+
+// 드래그 앤 드롭
+const leftDish = document.querySelectorAll('.dish.left')[0];
+const rightDish = document.querySelectorAll('.dish.right')[0];
+
+let onLeftValueDrag = dragula([leftValuesEl, leftDish]);
+let onRightValueDrag = dragula([rightValuesEl, rightDish]);
+
+// 왼쪽 접시
+onLeftValueDrag.on('drop', function(el, source, target){  
+  let data = dataSet[el.dataset.index];
+  let costDegree = getDegree(data.cost, data.direction);
+
+  if (source == leftValuesEl && target == leftDish) {
+    boardDegree = boardDegree - costDegree;
+  } else if (source == leftDish && target == leftValuesEl) {
+    boardDegree = boardDegree + costDegree;
+  }
+  rotateBoard(boardDegree);
+})
+.on('over', function(el, container, source){
+  if (container == leftDish) {
+    container.className += ' ex-over'
+  }
+})
+
+// 오른쪽 접시
+onRightValueDrag.on('drop', function(el, source, target){  
+  let data = dataSet[el.dataset.index];
+  let costDegree = getDegree(data.cost, data.direction);
+
+  if (source == rightValuesEl && target == rightDish) {
+    boardDegree = boardDegree - costDegree;
+  } else if (source == rightDish && target == rightValuesEl) {
+    boardDegree = boardDegree + costDegree;
+  }
+  rotateBoard();
+})
+
+rotateBoard();
+
+// 페이지 주소 복사하기
+function copyUrlToClipboard(){
+  var dummy = document.createElement("input");
+  var text = location.href;
+
+  document.body.appendChild(dummy);
+  dummy.value = text;
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+
+  alert('페이지 주소가 복사되었습니다!')
+}
+
+// 크레딧 명단 넣기 
+let creditList = [
+  {role: "기획·개발", name: "허현재"},
+  {role: "취재", name: "신동윤"},
+  {role: "데이터", name: "연다혜"},
+  {role: "디자인", name: "이도현"},
+]
+
+const creditEl = document.querySelectorAll('.credit')[0];
+
+creditList.map(function(e){
+  creditEl.innerHTML += `<span class="credit-role">${e.role}</span><span class="credit-name">${e.name}</span>`;
+})
+
+
+</script>
+</html>
