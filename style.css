@@ -119,7 +119,7 @@ body {
 .area-description {
   max-width: 840px;
   margin: 80px auto 0;
-  padding-top: 60px;
+  padding: 60px 15px 0;
   border-top: 3px solid black;
 }
 .description-title {
@@ -143,7 +143,7 @@ body {
 }
 .scale-container {
   position: relative;
-  height: 570px;
+  height: 420px;
   width: 470px;
   padding: 0 70px;
   box-sizing: border-box;
