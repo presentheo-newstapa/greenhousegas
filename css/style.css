@@ -38,7 +38,7 @@ body {
 
 /* 인트로 */
 .area-intro {
-  padding: 30px;
+  padding: 0 30px;
 }
 .intro-text{
   font-size: 1.5rem;
@@ -187,7 +187,7 @@ body {
 }
 .dish .scale-value {
   position: absolute;
-  bottom: 0;
+  bottom: 0.5rem;
 }
 .pillar {
   width: 290px;
@@ -228,8 +228,7 @@ body {
   height: 100%;
 }
 .scale-value {
-  width: 100%;
-  max-width: 200px;
+  width: 50%;
   text-align: center;
   cursor: pointer;
   z-index: 1;
@@ -262,7 +261,7 @@ body {
   font-weight: bold;
   margin: 0 20px;
   padding: 0.4rem 2rem;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.2);
   color: white;
   border: 3px solid white;
   border-radius: 1rem;
@@ -282,6 +281,13 @@ body {
   max-width: 840px;
   padding: 60px 15px 0;
   border-top: 3px solid black;
+}
+
+.related-contents {
+  display: flex;
+}
+.related-content img {
+  width: 100%;
 }
 
 /* 푸터 */
