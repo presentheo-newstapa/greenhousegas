@@ -137,7 +137,7 @@ body {
 /* 저울 영역 */
 .area-scale {
   display: flex;
-  max-width: 60vw;
+  padding: 0 5vw;
   margin: 80px auto 0;
   justify-content: space-between;
 }
@@ -208,8 +208,14 @@ body {
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 540px;
+  
 }
 .scale-value {
+  width: 100%;
+  max-width: 240px;
   text-align: center;
   cursor: pointer;
   z-index: 1;
