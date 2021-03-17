@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: 'Noto Serif KR', serif;
-  background-image: url(./assets/backgroundpaper.jpg);
+  background-image: url(../assets/backgroundpaper.jpg);
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -24,9 +24,14 @@ body {
   padding: 20px;
 }
 .logo-nstp {
-  text-indent: -9999px;
+  display: block;
   width: 160px;
   height: 24px;
+}
+.logo-nstp h1 {
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
   background: url('https://d1lawh9lju1xqd.cloudfront.net/2020/02/13125112-7D29-F2DC-0CFE-WPIMQL7EO5GRTCHEIHRQ.svg') no-repeat;
   background-size: cover;
 }
@@ -137,9 +142,11 @@ body {
 /* 저울 영역 */
 .area-scale {
   display: flex;
-  padding: 0 5vw;
+  /* padding: 0 5vw; */
+  max-width: 1460px;
   margin: 80px auto 0;
   justify-content: space-between;
+  align-items: stretch;
 }
 .scale-container {
   position: relative;
@@ -155,7 +162,7 @@ body {
   top: 100px;
   display: flex;
   justify-content: space-between;
-  background-image: url(./assets/Untitled-1_0000_Layer-2.png);
+  background-image: url(../assets/Untitled-1_0000_Layer-2.png);
   background-size: cover;
 }
 .dish {
@@ -165,7 +172,7 @@ body {
   margin-top: 30px;
   transform-origin: center -40px;
   border-radius: 10px;
-  background-image: url(./assets/Untitled-1_0002_Layer-4.png);
+  background-image: url(../assets/Untitled-1_0002_Layer-4.png);
   background-size: cover;
   z-index: 1;
 }
@@ -186,7 +193,7 @@ body {
   top: 70px;
   left: 50%;
   transform: translateX(-50%);
-  background-image: url(./assets/Untitled-1_0001_Layer-3.png);
+  background-image: url(../assets/Untitled-1_0001_Layer-3.png);
   background-size: cover;
 }
 
@@ -196,26 +203,30 @@ body {
 }
 .values-container {
   min-width: 240px;
+  border: 2px dashed gray;
+  border-radius: 1rem;
 }
 .values-title {
   font-family: 'Black Han Sans', sans-serif;
   font-weight: normal;
   font-size: 2rem;
   text-align: center;
+  letter-spacing: -0.1rem;
+  margin-top: -3rem;
 }
 .scale-values {
-  border: 2px dashed gray;
   padding: 1rem;
   box-sizing: border-box;
-  border-radius: 1rem;
   display: flex;
   flex-wrap: wrap;
-  max-width: 540px;
-  
+  align-items: center;
+  align-content: center;
+  max-width: 440px;
+  height: 100%;
 }
 .scale-value {
   width: 100%;
-  max-width: 240px;
+  max-width: 200px;
   text-align: center;
   cursor: pointer;
   z-index: 1;
@@ -238,17 +249,28 @@ body {
 .area-data-description {
   max-width: 60vw;
   margin: auto;
-  border: 2px dashed gray;
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 1rem;
-  
+}
+.cost-indicator {
+  font-size: 2rem; 
+  text-align: right; 
+  font-weight: bold;
+  margin: 0 20px;
+  padding: 0.4rem 2rem;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  border: 3px solid white;
+  border-radius: 1rem;
 }
 
 /* 아웃트로 영역 */
 .area-outro {
-  margin: 40px auto 80px;
+  margin: 120px auto 80px;
   max-width: 840px;
+  padding: 60px 15px 0;
+  border-top: 3px solid black;
 }
 
 /* 푸터 */
