@@ -41,7 +41,7 @@ body {
   padding: 30px;
 }
 .intro-text{
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   opacity: 0;
@@ -136,64 +136,65 @@ body {
 }
 .description-text {
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  line-height: 2.2rem;
 }
 
 /* 저울 영역 */
 .area-scale {
   display: flex;
-  /* padding: 0 5vw; */
-  max-width: 1460px;
+  padding: 0 30px;
   margin: 80px auto 0;
   justify-content: space-between;
   align-items: stretch;
 }
 .scale-container {
   position: relative;
-  height: 420px;
-  width: 470px;
+  height: 490px;
+  width: 660px;
   padding: 0 70px;
   box-sizing: border-box;
 }
 .board {
-  width: 330px;
-  height: 60px;
+  width: 520px;
+  height: 99px;
   position: absolute;
-  top: 100px;
+  top: 0;
   display: flex;
   justify-content: space-between;
-  background-image: url(../assets/Untitled-1_0000_Layer-2.png);
+  background-image: url(../assets/scale-arm.png);
   background-size: cover;
 }
 .dish {
-  width: 123px;
-  height: 192px;
+  width: 249px;
+  height: 323px;
   position: relative;
-  margin-top: 30px;
-  transform-origin: center -40px;
+  margin-top: 60px;
+  transform-origin: center 10px;
   border-radius: 10px;
-  background-image: url(../assets/Untitled-1_0002_Layer-4.png);
   background-size: cover;
   z-index: 1;
 }
 .dish.left {
-  right: 30px;
+  background-image: url(../assets/scale-dish-left.png);
+  right: 100px;
 }
 .dish.right {
-  left: 30px;
+  background-image: url(../assets/scale-dish-right.png);
+  left: 100px;
 }
 .dish .scale-value {
   position: absolute;
   bottom: 0;
 }
 .pillar {
-  width: 140px;
-  height: 300px;
+  width: 290px;
+  height: 458px;
   position: absolute;
-  top: 70px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
-  background-image: url(../assets/Untitled-1_0001_Layer-3.png);
+  background-image: url(../assets/scale-pillar.png);
   background-size: cover;
 }
 
@@ -265,6 +266,14 @@ body {
   border-radius: 1rem;
 }
 
+/* 차트 영역 */
+.area-chart {
+  margin: 120px auto 80px;
+  max-width: 840px;
+  padding: 60px 15px 0;
+  border-top: 3px solid black;
+}
+
 /* 아웃트로 영역 */
 .area-outro {
   margin: 120px auto 80px;
@@ -289,6 +298,6 @@ body {
   margin-right: 0.6rem;
 }
 
-.ex-over {
-  background-color: red;
-}
+/* .ex-over {
+  background-color: rgba(0,0,0,0.2);
+} */
