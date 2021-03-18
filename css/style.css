@@ -143,59 +143,58 @@ body {
 /* 저울 영역 */
 .area-scale {
   display: flex;
-  padding: 0 30px;
-  margin: 80px auto 0;
-  justify-content: space-around;
+  padding: 0 2rem;
+  margin: 5rem auto 0;
+  justify-content: center;
   align-items: stretch;
 }
 .scale-container {
+  width: 580px;
   position: relative;
-  height: 490px;
-  width: 660px;
-  padding: 0 70px;
   box-sizing: border-box;
+  margin: 0 6rem 2rem;
 }
 .board {
-  width: 520px;
-  height: 99px;
+  width: 100%;
+  height: 23%;
   position: absolute;
   top: 0;
-  display: flex;
-  justify-content: space-between;
   background-image: url(../assets/scale-arm.png);
   background-size: cover;
+  display: flex;
+  justify-content: space-between;
 }
 .dish {
-  width: 249px;
-  height: 323px;
+  width: 40%;
+  height: 258%;
   position: relative;
-  margin-top: 60px;
-  transform-origin: center 10px;
+  margin-top: 13%;
+  transform-origin: center 1%;
   border-radius: 10px;
   background-size: cover;
   z-index: 1;
 }
 .dish.left {
   background-image: url(../assets/scale-dish-left.png);
-  right: 100px;
+  left: -15%;
 }
 .dish.right {
   background-image: url(../assets/scale-dish-right.png);
-  left: 100px;
+  right: -14%;
 }
 .dish .scale-value {
   position: absolute;
   bottom: 0.5rem;
 }
 .pillar {
-  width: 290px;
-  height: 458px;
-  position: absolute;
-  top: 30px;
+  width: 53%;
+  position: relative;
+  top: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  background-image: url(../assets/scale-pillar.png);
-  background-size: cover;
+}
+.pillar img {
+  width: 100%;
 }
 
 .area-values {
@@ -305,6 +304,8 @@ body {
 }
 .profit-indicator{
   width: 50%;
+  display: flex;
+  align-items: center;
   margin-bottom: 0.5rem;
   text-align: center;
   box-sizing: border-box;
@@ -314,15 +315,18 @@ body {
   margin-right: 0.5rem;
   max-width: 160px;
 }
-.profit-indicator span{
-  /* border-left: 2px solid rgba(0,0,0,0.2); */
+.profit-indicator p{
+  width: 50%;
   font-weight: bold;
   font-size: 1.3rem;
-  /* padding-left: 1rem; */
   vertical-align: middle;
   padding: 0.5rem 1rem;
   background-color: white;
   border-radius: 0.5rem;
+}
+.profit-indicator p span{
+  font-size: 0.9rem;
+  color: gray;
 }
 
 
@@ -435,10 +439,37 @@ body {
   .description-text {
     font-size: 1.1rem;
   }
-  /* .area-scale {
+  .area-scale {
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+  .values-container {
+    order: 2;
+    width: 50%;
+    margin-top: 4rem;
+    min-width: 1px;
+    box-sizing: border-box;
+  }
+  .middle-container {
+    order: 1;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .scale-container {
+    width: 80%;
+    margin: auto;
+  }
+  .scale-values {
+    align-content: flex-start;
+  }
+  .scale-value {
+    touch-action: none;
+    width: 100%;
+  }
+  .area-data-description {
     display: none;
-  } */
-  #myChart {
-    display: none;
+  }
+  .profit-indicator {
+    width: 100%;
   }
 }
