@@ -5,14 +5,6 @@
 html {
   font-size: 14px;
 }
-@media (max-width: 780px) {
-  html {
-    font-size: 12px;
-  }
-  .intro-bg {
-    display: none;
-  }
-}
 
 body {
   font-family: 'Noto Serif KR', serif;
@@ -40,9 +32,6 @@ body {
 }
 
 /* 인트로 */
-.area-intro {
-  padding: 0 30px;
-}
 .intro-text{
   font-size: 1.5rem;
   font-weight: 600;
@@ -128,8 +117,8 @@ body {
 /* 설명 영역 */
 .area-description {
   max-width: 840px;
-  margin: 80px auto 0;
-  padding: 60px 15px 0;
+  margin: 5rem auto 0;
+  padding: 4rem 1rem 0;
   border-top: 3px solid black;
 }
 .description-title {
@@ -323,3 +312,38 @@ body {
 /* .ex-over {
   background-color: rgba(0,0,0,0.2);
 } */
+
+
+@media (max-width: 780px) {
+  html {
+    font-size: 12px;
+  }
+  .intro-bg {
+    display: none;
+  }
+  .intro-text {
+    font-size: 1.2rem;
+  }
+  .intro-text .spec {
+    font-size: 1.4rem;
+  }
+  .intro-title {
+    font-size: 3rem;
+    font-weight: normal;
+    opacity: 0;
+    line-height: 4rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .area-description, .area-chart, .area-outro, .area-related-contents {
+    margin: 3rem 1rem 0;
+    padding: 3rem 0;
+    border-width: 2px;
+  }
+  .area-scale {
+    display: none;
+  }
+  #myChart {
+    display: none;
+  }
+}

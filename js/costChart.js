@@ -85,28 +85,29 @@ let dataSet2 = [
   },
 ]
 
-
 let nameData = []
 let costData = []
+let colorData = []
 
 dataSet2.map(function (e, i) {
     nameData.push(e.caption);
     // costData.push(e.direction ? e.cost : e.cost*(-1));
     costData.push(e.cost);
+    colorData.push(e.direction ? 'rgba(34,139,34, 0.7)' : 'rgba(255,159,64,1)');
 })
   
 var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
-    type: 'bar',
+    type: 'horizontalBar',
 
     // The data for our dataset
     data: {
         labels: nameData,
         datasets: [{
             label: '금액(백만 원)',
-            backgroundColor: 'rgba(34,139,34, 0.7)',
-            borderColor: 'rgba(34,139,34, 1)',
+            backgroundColor: colorData,
+            // borderColor: 'rgba(34,139,34, 1)',
             data: costData
         }]
     },
