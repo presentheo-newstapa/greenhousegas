@@ -2,7 +2,7 @@ let dataSet2 = [
   {
     name: 'posco',
     caption: '포스코',
-    description: "2021년 예산안에는 전년도 예산 150억원 대비 150억원 (100.0%) 증액된 300억원이 편성되었다.",
+    description: "2019년 배출권 할당량 2,176,712,124,706원",
     cost: 2176712124706,
     direction: false,
   },
