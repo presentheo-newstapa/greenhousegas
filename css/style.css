@@ -1,5 +1,10 @@
 @charset "UTF-8";
-
+@font-face {
+  font-family: 'drfont_daraehand';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/drfont_daraehand.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {margin: 0; padding: 0;}
 html {
@@ -16,7 +21,7 @@ body {
 
 /* 헤더 */
 .header {
-  padding: 20px;
+  padding: 1.5rem;
 }
 .logo-nstp {
   display: block;
@@ -61,7 +66,8 @@ body {
   padding: 0 1rem;
 }
 .sm {
-  font-size: 1.5rem;
+  font-size: 0.7em;
+  color: gray;
 }
 
 .share-sns-button {
@@ -123,7 +129,7 @@ body {
 }
 .description-title {
   font-family: 'Black Han Sans', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 100;
   letter-spacing: -0.1rem;
   color: rgb(34,139,34);
@@ -224,39 +230,59 @@ body {
   text-align: center;
   cursor: pointer;
   z-index: 1;
+  box-sizing: border-box;
+  padding: 0.2rem;
 }
 .scale-value img{
-  max-width: 160px;
+  width: 100%;
 }
 .scale-value .scale-value-caption {
-  font-family: 'Black Han Sans', sans-serif;
+  /* font-family: 'Black Han Sans', sans-serif; */
+  font-family: 'drfont_daraehand';
   max-width: 160px;
   margin: 0 auto;
   background-color: #fff;
-  padding: 4px 12px;
   border-radius: 4px;
-  box-shadow: 3px 2px rgba(0,0,0,0.5);
-  font-size: 1.4rem;
+  /* box-shadow: 3px 2px rgba(0,0,0,0.5); */
+  font-size: 1.1rem;
 }
 
 /* 데이터 설명 영역 */
 .area-data-description {
   max-width: 60vw;
   margin: auto;
-  padding: 1rem;
+  padding: 1rem 3rem;
   box-sizing: border-box;
   border-radius: 1rem;
+}
+.data-description-container {
+  padding: 0.6rem 2rem;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  border: 3px solid white;
+  border-radius: 1rem;
+}
+.data-description {
+  text-align: right;
+}
+.data-description>p {
+  margin-bottom: 0.5rem;
+}
+.data-description-label {
+  padding: 0.1rem 0.4rem;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: black;
 }
 .cost-indicator {
   font-size: 2rem; 
   text-align: right; 
   font-weight: bold;
-  margin: 0 20px;
-  padding: 0.4rem 2rem;
-  background-color: rgba(0,0,0,0.2);
-  color: white;
-  border: 3px solid white;
-  border-radius: 1rem;
+}
+.cost-indicator.has-cost{
+  border-top: 2px solid white;
 }
 
 /* 차트 영역 */
@@ -266,19 +292,67 @@ body {
   padding: 60px 15px 0;
   border-top: 3px solid black;
 }
+#myChart {
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#profit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.profit-indicator{
+  width: 50%;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+.profit-indicator img{
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  max-width: 160px;
+}
+.profit-indicator span{
+  /* border-left: 2px solid rgba(0,0,0,0.2); */
+  font-weight: bold;
+  font-size: 1.3rem;
+  /* padding-left: 1rem; */
+  vertical-align: middle;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
 
 /* 아웃트로 영역 */
 .area-outro {
-  margin: 120px auto 80px;
+  margin: 5rem auto 4rem;
   max-width: 840px;
-  padding: 60px 15px 0;
+  padding: 4rem 1rem 0;
   border-top: 3px solid black;
+}
+.nstp-donate {
+  display: block;
+  max-width: 280px;
+  margin: 2rem auto 0;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ff733c;
+  border: 3px solid white;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 }
 
 .area-related-contents {
-  margin: 120px auto 80px;
+  margin: 4rem auto;
   max-width: 840px;
-  padding: 60px 15px 0;
+  padding: 3rem 1rem 0;
   border-top: 3px solid black;
 }
 
@@ -291,14 +365,24 @@ body {
 .related-content img {
   width: 100%;
   max-width: 780px;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+.related-content-caption {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
 }
 
 /* 푸터 */
 .footer {
   border-top: 1px dashed gray;
-  padding: 30px;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
+}
+.credit {
+  padding-right: 3rem;
 }
 .credit-role {
   font-size: 0.8rem;
@@ -317,6 +401,14 @@ body {
 @media (max-width: 780px) {
   html {
     font-size: 12px;
+  }
+  .header {
+    padding: 1rem;
+  }
+  .logo-nstp {
+    display: block;
+    width: 120px;
+    height: 16px;
   }
   .intro-bg {
     display: none;
@@ -337,12 +429,15 @@ body {
   }
   .area-description, .area-chart, .area-outro, .area-related-contents {
     margin: 3rem 1rem 0;
-    padding: 3rem 0;
+    padding: 3rem 0 0;
     border-width: 2px;
   }
-  .area-scale {
-    display: none;
+  .description-text {
+    font-size: 1.1rem;
   }
+  /* .area-scale {
+    display: none;
+  } */
   #myChart {
     display: none;
   }

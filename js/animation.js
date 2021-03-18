@@ -12,25 +12,25 @@ animationTimeline.add({
   targets: introText[0],
   translateX: 0,
   opacity: 1,
-  duration: 1,
+  duration: 1000,
 })
 .add({
   targets: introText[1],
   translateX: 0,
   opacity: 1,
-  duration: 1,
+  duration: 1000,
 })
 .add({
   targets: introText[2],
   translateX: 0,
   opacity: 1,
-  duration: 1,
+  duration: 1000,
 })
 .add({
   targets: introTitle,
   translateX: 0,
   opacity: 1,
-  duration: 1,
+  duration: 1000,
 })
 
 // 숫자 세기
