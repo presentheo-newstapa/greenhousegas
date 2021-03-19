@@ -265,6 +265,9 @@ body {
 .data-description {
   text-align: right;
 }
+.data-description.has-data{
+  border-bottom: 2px solid white;
+}
 .data-description>p {
   margin-bottom: 0.5rem;
 }
@@ -280,9 +283,6 @@ body {
   font-size: 2rem; 
   text-align: right; 
   font-weight: bold;
-}
-.cost-indicator.has-cost{
-  border-top: 2px solid white;
 }
 
 /* 차트 영역 */
@@ -308,7 +308,6 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
-  text-align: center;
   box-sizing: border-box;
 }
 .profit-indicator img{
@@ -319,10 +318,9 @@ body {
 .profit-indicator p{
   width: 50%;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   vertical-align: middle;
   padding: 0.5rem 1rem;
-  background-color: white;
   border-radius: 0.5rem;
 }
 .profit-indicator p span{
