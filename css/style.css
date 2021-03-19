@@ -185,6 +185,7 @@ body {
 .dish .scale-value {
   position: absolute;
   bottom: 0.5rem;
+  min-width: 140px;
 }
 .pillar {
   width: 53%;
@@ -382,11 +383,9 @@ body {
 .footer {
   border-top: 1px dashed gray;
   padding: 2rem;
-  display: flex;
-  justify-content: space-between;
 }
 .credit {
-  padding-right: 3rem;
+  text-align: center;
 }
 .credit-role {
   font-size: 0.8rem;
@@ -405,6 +404,10 @@ body {
 @media (max-width: 780px) {
   html {
     font-size: 12px;
+  }
+  body {
+    background-attachment: scroll;
+    background-size: contain;
   }
   .header {
     padding: 1rem;
