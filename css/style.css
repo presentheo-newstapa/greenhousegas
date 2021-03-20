@@ -185,8 +185,9 @@ body {
 }
 .dish .scale-value {
   position: absolute;
+  width: 100%;
   bottom: 0.5rem;
-  min-width: 140px;
+  max-width: 12rem;
 }
 .pillar {
   width: 53%;
@@ -266,9 +267,6 @@ body {
 .data-description {
   text-align: right;
 }
-.data-description.has-data{
-  border-bottom: 2px solid white;
-}
 .data-description>p {
   margin-bottom: 0.5rem;
 }
@@ -323,6 +321,7 @@ body {
   vertical-align: middle;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+  line-height: 1.2;
 }
 .profit-indicator p span{
   font-size: 0.9rem;
@@ -462,7 +461,7 @@ body {
     border-radius: 0;
   }
   .values-container:first-of-type {
-    border-right: 1px dashed gray;
+    border-right: 1px dashed rgba(0,0,0,0.7);
 
   }
   .values-title {
@@ -496,6 +495,8 @@ body {
   }
   .footer {
     display: block;
+    padding-left: 0;
+    padding-right: 0;
   }
   .credit {
     margin-bottom: 1rem;
