@@ -67,7 +67,7 @@
   <div class="area-description">
     <h2 class="description-title">😗 온실가스 배출권이 뭐에요?</h2>
     <p class="description-text">기업이 생산 활동을 하면 그 과정에서 이산화탄소 등 온실가스 🏭 가 발생합니다. 그런데 온실가스를 무턱대고 뿜어내면 기후위기 🌏🔥 가 더 심각해지겠죠?</p>
-    <p class="description-text">그래서 우리나라 정부는 2015년부터 기업들에게 <u>온실가스 배출권</u>을 공짜로 나눠주고, 그 이상 온실가스를 배출하려면 <u>돈 💰 을 내고 배출권을 사도록</u> 하고 있어요.<br>이렇게 정부가 나눠준 배출권 할당량을 가격으로 환산하면, 2019년 한 해에만 <span class="spec">17,076,462,086원</span>원<span class="sm">(약 15조 6천억 원!)</span>에 달한다고 해요. 엄청난 규모죠? 😲</p>
+    <p class="description-text">그래서 우리 정부는 2015년부터 기업들에게 <u>온실가스 배출권</u>을 공짜로 나눠주고, 그 이상 온실가스를 배출하려면 <u>돈 💰 을 내고 배출권을 사도록</u> 하고 있어요.<br>이렇게 정부가 나눠준 배출권 할당량을 가격으로 환산하면, 2019년 한 해에만 <span class="spec">17,076,462,086원</span>원<span class="sm">(약 15조 6천억 원!)</span>에 달한다고 해요. 엄청난 규모죠? 😲</p>
     <p class="description-text">만약 이 정도 비용을 다른 곳에 쓴다면 얼마나 많은 일을 할 수 있을까요? 국내 주요 기업들이 공짜로 얻은 배출권 가격과 정부 · 공공기관 예산을 한번 비교해볼게요. <strong>아래 👇 에 있는 저울에 각 항목을 드래그(<u>모바일에서는 터치!!</u>)해서 올려 보세요. 😎</strong></p>
   </div>
 
@@ -377,8 +377,12 @@ if (window.screen.width < 768) {
       let costDegree = getDegree(data.cost, data.direction);
       boardDegree = boardDegree + costDegree;
       scaleCost = scaleCost - data.cost;
+      dataDescription.push(data);
+      
       rotateBoard(boardDegree);
       renderScaleCost();
+      rederDataDescription();
+      
       clonedElement.style.left = Math.floor(Math.random() * 30) + "%";
       leftDish.append(clonedElement);
     }
@@ -392,8 +396,12 @@ if (window.screen.width < 768) {
       let costDegree = getDegree(data.cost, data.direction);
       boardDegree = boardDegree + costDegree;
       scaleCost = scaleCost + data.cost;
+      dataDescription.push(data);
+
       rotateBoard(boardDegree);
       renderScaleCost();
+      rederDataDescription();
+
       clonedElement.style.left = Math.floor(Math.random() * 30) + "%";
       rightDish.append(clonedElement);
     }
@@ -407,8 +415,14 @@ if (window.screen.width < 768) {
       let costDegree = getDegree(data.cost, data.direction);
       boardDegree = boardDegree - costDegree;
       scaleCost = scaleCost + data.cost;
+      dataDescription = [
+        ...dataDescription.slice(0, dataDescription.indexOf(data)), 
+        ...dataDescription.slice(dataDescription.indexOf(data), -1)
+      ]
+
       rotateBoard(boardDegree);
       renderScaleCost();
+      rederDataDescription();
       leftValuesEl.append(clonedElement);
     }
   })
@@ -421,8 +435,14 @@ if (window.screen.width < 768) {
       let costDegree = getDegree(data.cost, data.direction);
       boardDegree = boardDegree - costDegree;
       scaleCost = scaleCost - data.cost;
+      dataDescription = [
+        ...dataDescription.slice(0, dataDescription.indexOf(data)), 
+        ...dataDescription.slice(dataDescription.indexOf(data), -1)
+      ]
+
       rotateBoard(boardDegree);
       renderScaleCost();
+      rederDataDescription();
       rightValuesEl.append(clonedElement);
     }
   })

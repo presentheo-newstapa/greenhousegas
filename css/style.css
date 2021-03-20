@@ -467,7 +467,7 @@ body {
 
   }
   .values-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .middle-container {
     order: 1;
@@ -488,9 +488,9 @@ body {
     max-width: none;
     padding: 3rem 1rem 0;
   }
-  .data-description {
+  /* .data-description {
     display: none;
-  }
+  } */
   .cost-indicator {
     font-size: 1.4rem;
   }
