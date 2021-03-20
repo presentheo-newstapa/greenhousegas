@@ -85,7 +85,7 @@ body {
 .sticker {
   position: absolute;
   z-index: 0;
-  animation: sticker-animation 1s infinite steps(2);
+  animation: sticker-animation 1.5s infinite steps(2);
 }
 @keyframes sticker-animation {
   from {
@@ -482,7 +482,6 @@ body {
     align-content: flex-start;
   }
   .scale-value {
-    touch-action: none;
     width: 100%;
   }
   .area-data-description {
