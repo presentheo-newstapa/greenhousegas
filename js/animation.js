@@ -2,6 +2,10 @@
 const introText = document.querySelectorAll('.intro-text');
 const introTitle = document.querySelectorAll('.intro-title')[0];
 
+for (let v = 0; v < introText.length; v++) {
+  introText[v].style.transform = 'translateX(120px)';
+}
+
 const number = document.getElementById('NUMBER')
 
 let animationTimeline = anime.timeline({
@@ -12,25 +16,34 @@ animationTimeline.add({
   targets: introText[0],
   translateX: 0,
   opacity: 1,
-  duration: 700,
+  duration: 400,
 })
 .add({
   targets: introText[1],
   translateX: 0,
   opacity: 1,
-  duration: 700,
+  duration: 400,
+  delay: 300,
 })
 .add({
   targets: introText[2],
   translateX: 0,
   opacity: 1,
-  duration: 700,
+  duration: 400,
+  delay: 300,
 })
 .add({
   targets: introTitle,
   translateX: 0,
   opacity: 1,
-  duration: 500,
+  duration: 400,
+  delay: 400,
+})
+.add({
+  targets: introTitle,
+  rotate: -3,
+  duration: 600,
+  delay: 300,
 })
 
 // 숫자 세기

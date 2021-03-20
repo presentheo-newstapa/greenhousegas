@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="뉴스타파(NEWSTAPA) | 한국탐사저널리즘센터(KCIJ) | 99% 시민들의 독립언론">
+  <meta property="og:url" content="https://pages.newstapa.org/greenhousegas">
+  <meta property="og:title" content="온실가스 배출권, 이렇게 퍼줘도 되겠니?">
   <meta property="og:image" content="./assets/og-image.jpg">
-  <meta property="og:description" content="온실가스 배출권, 이렇게 퍼줘도 되겠니?" >
+  <meta property="og:description" content="온실가스 배출권이 뭐야? 도대체 뭐가 문제인데? 쉽고 재미있는 뉴스타파 데이터 인터랙티브" >
   <title>온실가스 배출권, 이렇게 퍼줘도 되겠니?</title>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -38,7 +39,6 @@
   <!-- End Google Tag Manager (noscript) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="./js/countUp.min.js"> </script>
   
   <header class="header">
@@ -67,7 +67,7 @@
     <h2 class="description-title">😗 온실가스 배출권이 뭐에요?</h2>
     <p class="description-text">기업이 생산 활동을 하면 그 과정에서 이산화탄소 등 온실가스 🏭 가 발생합니다. 그런데 온실가스를 무턱대고 뿜어내면 기후위기 🌏🔥 가 더 심각해지겠죠?</p>
     <p class="description-text">그래서 우리나라 정부는 2015년부터 기업들에게 <u>온실가스 배출권</u>을 공짜로 나눠주고, 그 이상 온실가스를 배출하려면 <u>돈 💰 을 내고 배출권을 사도록</u> 하고 있어요.<br>이렇게 정부가 나눠준 배출권 할당량을 가격으로 환산하면, 2019년 한 해에만 <span class="spec">17,076,462,086원</span>원<span class="sm">(약 15조 6천억 원!)</span>에 달한다고 해요. 엄청난 규모죠? 😲</p>
-    <p class="description-text">만약 이 정도 비용을 다른 곳에 쓴다면 얼마나 많은 일을 할 수 있을까요? 국내 주요 기업들이 공짜로 얻은 배출권 가격과 정부 · 공공기관 예산을 한번 비교해볼게요. <strong>아래 👇 에 있는 저울에 각 항목을 드래그해서 올려 보세요. 😎</strong></p>
+    <p class="description-text">만약 이 정도 비용을 다른 곳에 쓴다면 얼마나 많은 일을 할 수 있을까요? 국내 주요 기업들이 공짜로 얻은 배출권 가격과 정부 · 공공기관 예산을 한번 비교해볼게요. <strong>아래 👇 에 있는 저울에 각 항목을 드래그(<u>모바일에서는 터치!!</u>)해서 올려 보세요. 😎</strong></p>
   </div>
 
   <!-- 저울 인터랙티브 -->
@@ -158,7 +158,6 @@
   </footer>
 
   <script src="./js/animation.js"></script>
-  <script src="./js/costChart.js"></script>
 
 </body>
 
@@ -176,6 +175,7 @@ let dataSet = [
     description: "2019년 온실가스 무상 배출권 비용 2,176,712,124,706원",
     cost: 2176712124706,
     direction: false,
+    mobile: true,
   },
   {
     index: 1,
@@ -184,6 +184,7 @@ let dataSet = [
     description: "2019년 온실가스 무상 배출권 비용 327,640,092,434원",
     cost: 327640092434,
     direction: false,
+    mobile: true,
   },
   {
     index: 2,
@@ -192,6 +193,7 @@ let dataSet = [
     description: "2019년 온실가스 무상 배출권 비용 151,771,158,848원",
     cost: 151771158848,
     direction: false,
+    mobile: true,
   },
   {
     index: 3,
@@ -200,6 +202,7 @@ let dataSet = [
     description: "2019년 온실가스 무상 배출권 비용 198,186,964,094원",
     cost: 198186964094,
     direction: false,
+    mobile: true,
   },
   {
     index: 4,
@@ -208,6 +211,7 @@ let dataSet = [
     description: "축구장 190개 면적, 100MW 규모 태양광발전단지 건설",
     cost: 344000000000,
     direction: true,
+    mobile: true,
   },
   {
     index: 5,
@@ -216,6 +220,7 @@ let dataSet = [
     description: "풍력발전기 66개, 140MW 규모 풍력발전단지 건설",
     cost: 409700000000,
     direction: true,
+    mobile: true,
   },
   {
     index: 6,
@@ -224,6 +229,7 @@ let dataSet = [
     description: "전기자동차 12만 1천대에 최대 1,900만 원씩 지원",
     cost: 1119584000000,
     direction: true,
+    mobile: true,
   },
   {
     index: 7,
@@ -232,6 +238,7 @@ let dataSet = [
     description: "수소자동차 15,000대에 최대 3,750만 원씩 지원",
     cost: 365500000000,
     direction: true,
+    mobile: false,
   },
   {
     index: 8,
@@ -240,6 +247,7 @@ let dataSet = [
     description: "전국 어린이통학차량 12,000대에 500만 원씩 지원(지방비 50%)",
     cost: 30000000000,
     direction: true,
+    mobile: true,
   },
   {
     index: 9,
@@ -248,6 +256,7 @@ let dataSet = [
     description: "폐비닐, 폐지, 유리병 등 재활용 폐기물 비축 시설 구축",
     cost: 26000000000,
     direction: true,
+    mobile: false,
   },
   {
     index: 10,
@@ -256,6 +265,7 @@ let dataSet = [
     description: "IT 활용가능 직무에 청년일자리 창출 지원금 4,676억원 편성",
     cost: 467600000000,
     direction: true,
+    mobile: true,
   },
   {
     index: 11,
@@ -264,6 +274,7 @@ let dataSet = [
     description: "취업취약계층을 대상으로 생계지원과 취업지원서비스 제공",
     cost: 1283019000000,
     direction: true,
+    mobile: false,
   },
 ]
 
@@ -271,7 +282,13 @@ let dataSet = [
 dataSet.map(function(e, i){
   // let elem = `<div class="scale-value" data-index="${i}"><img src="./assets/value-${e.name}.png"><p class="scale-value-caption">${e.caption}</p></div>`;
   let elem = `<div class="scale-value" data-index="${e.index}"><img src="./assets/value-${e.name}.png"></div>`;
-  e.direction?rightValuesEl.innerHTML+=elem:leftValuesEl.innerHTML+=elem;
+  if (window.screen.width < 768) {
+    if (e.mobile){
+      e.direction?rightValuesEl.innerHTML+=elem:leftValuesEl.innerHTML+=elem;
+    }
+  } else {
+    e.direction?rightValuesEl.innerHTML+=elem:leftValuesEl.innerHTML+=elem;
+  }
 })
 
 // 현재 각도
@@ -342,6 +359,75 @@ const rightDish = document.querySelectorAll('.dish.right')[0];
 
 let onLeftValueDrag = dragula([leftValuesEl, leftDish]);
 let onRightValueDrag = dragula([rightValuesEl, rightDish]);
+
+// 모바일에서는 터치도 지원
+
+if (window.screen.width < 768) {
+
+  onLeftValueDrag.destroy();
+  onRightValueDrag.destroy();
+
+  document.querySelectorAll('.scale-values.left')[0].addEventListener('click', function(e) {
+    let el = e.target.closest('.scale-value');
+    if (el) {
+      let clonedElement = el.cloneNode(true);
+      el.remove()
+      let data = dataSet[clonedElement.dataset.index];
+      let costDegree = getDegree(data.cost, data.direction);
+      boardDegree = boardDegree + costDegree;
+      scaleCost = scaleCost - data.cost;
+      rotateBoard(boardDegree);
+      renderScaleCost();
+      clonedElement.style.left = Math.floor(Math.random() * 30) + "%";
+      leftDish.append(clonedElement);
+    }
+  })
+  document.querySelectorAll('.scale-values.right')[0].addEventListener('click', function(e) {
+    let el = e.target.closest('.scale-value');
+    if (el) {
+      let clonedElement = el.cloneNode(true);
+      el.remove()
+      let data = dataSet[clonedElement.dataset.index];
+      let costDegree = getDegree(data.cost, data.direction);
+      boardDegree = boardDegree + costDegree;
+      scaleCost = scaleCost + data.cost;
+      rotateBoard(boardDegree);
+      renderScaleCost();
+      clonedElement.style.left = Math.floor(Math.random() * 30) + "%";
+      rightDish.append(clonedElement);
+    }
+  })
+  document.querySelectorAll('.dish.left')[0].addEventListener('click', function(e) {
+    let el = e.target.closest('.scale-value');
+    if (el) {
+      let clonedElement = el.cloneNode(true);
+      el.remove()
+      let data = dataSet[clonedElement.dataset.index];
+      let costDegree = getDegree(data.cost, data.direction);
+      boardDegree = boardDegree - costDegree;
+      scaleCost = scaleCost + data.cost;
+      rotateBoard(boardDegree);
+      renderScaleCost();
+      leftValuesEl.append(clonedElement);
+    }
+  })
+  document.querySelectorAll('.dish.right')[0].addEventListener('click', function(e) {
+    let el = e.target.closest('.scale-value');
+    if (el) {
+      let clonedElement = el.cloneNode(true);
+      el.remove()
+      let data = dataSet[clonedElement.dataset.index];
+      let costDegree = getDegree(data.cost, data.direction);
+      boardDegree = boardDegree - costDegree;
+      scaleCost = scaleCost - data.cost;
+      rotateBoard(boardDegree);
+      renderScaleCost();
+      rightValuesEl.append(clonedElement);
+    }
+  })
+
+}
+
 
 // 왼쪽 접시
 onLeftValueDrag.on('drop', function(el, source, target){  

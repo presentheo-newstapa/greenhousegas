@@ -17,6 +17,7 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 /* 헤더 */
@@ -42,7 +43,7 @@ body {
   font-weight: 600;
   letter-spacing: -0.02em;
   opacity: 0;
-  transform: translateX(120);
+  /* transform: translateX(120); */
   margin-bottom: 1.6rem;
   line-height: 3rem;
   text-align: center;
@@ -426,6 +427,7 @@ body {
   }
   .intro-text {
     font-size: 1.2rem;
+    line-height: 2.4rem;
   }
   .intro-text .spec {
     font-size: 1.4rem;
@@ -434,7 +436,7 @@ body {
     font-size: 3rem;
     font-weight: normal;
     opacity: 0;
-    line-height: 4rem;
+    line-height: 3.5rem;
     text-align: center;
     margin-top: 3rem;
   }
@@ -470,7 +472,7 @@ body {
   .middle-container {
     order: 1;
     width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
   .scale-container {
     width: 80%;
@@ -484,7 +486,14 @@ body {
     width: 100%;
   }
   .area-data-description {
+    max-width: none;
+    padding: 3rem 1rem 0;
+  }
+  .data-description {
     display: none;
+  }
+  .cost-indicator {
+    font-size: 1.4rem;
   }
   .profit-indicator {
     width: 100%;
