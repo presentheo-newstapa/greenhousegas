@@ -55,6 +55,7 @@ body {
   line-height: 6.5rem;
   text-align: center;
   margin-top: 5rem;
+  letter-spacing: -0.15rem;
 }
 .spec {
   background-color: rgba(34,139,34,0.3);
@@ -381,6 +382,9 @@ body {
 .footer {
   border-top: 1px dashed gray;
   padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 .credit {
   text-align: center;
@@ -392,6 +396,9 @@ body {
 }
 .credit-name {
   margin-right: 0.6rem;
+}
+.copyright {
+  text-align: center;
 }
 
 /* .ex-over {
@@ -437,12 +444,13 @@ body {
     padding: 3rem 0 0;
     border-width: 2px;
   }
-  .description-text {
-    font-size: 1.1rem;
+  .description-title {
+    font-size: 1.8rem;
   }
   .area-scale {
     flex-wrap: wrap;
     padding: 0 1rem;
+    margin-top: 2rem;
   }
   .values-container {
     order: 2;
@@ -450,6 +458,15 @@ body {
     margin-top: 4rem;
     min-width: 1px;
     box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+  }
+  .values-container:first-of-type {
+    border-right: 1px dashed gray;
+
+  }
+  .values-title {
+    font-size: 1.8rem;
   }
   .middle-container {
     order: 1;
@@ -472,5 +489,15 @@ body {
   }
   .profit-indicator {
     width: 100%;
+  }
+  .related-contents {
+    display: block;
+    
+  }
+  .footer {
+    display: block;
+  }
+  .credit {
+    margin-bottom: 1rem;
   }
 }
