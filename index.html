@@ -505,20 +505,6 @@ function getRandomPosition(){
   return Math.floor(Math.random() * 35);
 }
 
-// 페이지 주소 복사하기
-function copyUrlToClipboard(){
-  var dummy = document.createElement("input");
-  var text = location.href;
-
-  document.body.appendChild(dummy);
-  dummy.value = text;
-  dummy.select();
-  document.execCommand("copy");
-  document.body.removeChild(dummy);
-
-  alert('페이지 주소가 복사되었습니다!')
-}
-
 // 크레딧 명단 넣기 
 let creditList = [
   {role: "개발", name: "허현재"},
